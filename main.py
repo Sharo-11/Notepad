@@ -18,7 +18,9 @@ def openFile():
     if file == "":
         file = None
     else:
-        root.title(os.path.basename(file) + " - Hackerzz Notepad")
+        name=os.path.basename(file)
+        name=name.replace(".txt","")
+        root.title(name + " - Hackerzz Notepad")
         TextArea.delete(1.0, END)
         f = open(file, "r")
         TextArea.insert(1.0, f.read())
@@ -38,7 +40,9 @@ def saveFile():
             f.write(TextArea.get(1.0, END))
             f.close()
             
-            root.title(os.path.basename(file) + " - Hackerzz Notepad")
+            name=os.path.basename(file)
+            name=name.replace(".txt","")
+            root.title(name + " - Hackerzz Notepad")
             print("File Saved")
     else:
          #Save the file
