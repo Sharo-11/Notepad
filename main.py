@@ -68,7 +68,7 @@ def paste():
     TextArea.event_generate(("<<Paste>>"))
 
 def about():
-    showinfo("Hackerzz Notepad", "Notepad by Zacker")
+    showinfo("Hackerzz Notepad", "Notepad by Sharo")
 
 def popup_menu(event):
     quick.tk_popup(event.x_root,event.y_root)
